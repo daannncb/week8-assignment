@@ -1,14 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const roboto_Mono = Roboto_Mono({
   subsets: ["latin"],
 });
 
@@ -20,11 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <nav>
-          <ul>
+      <body>
+        <header id="page-heading" className="font-bold text-2xl">
+          A History of Culture
+        </header>
+        <nav className="my-3">
+          <ul className="flex flex-row gap-10 justify-center">
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -34,13 +29,15 @@ export default function RootLayout({ children }) {
             <li>
               <Link href="/about">About</Link>
             </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
           </ul>
         </nav>
-
-        {children}
+        <main>{children}</main>
+        <footer>
+          This site is heavily influenced by the works of{" "}
+          <Link href="https://www.youtube.com/@underthefigtreee">
+            @underthefigtree
+          </Link>
+        </footer>
       </body>
     </html>
   );
