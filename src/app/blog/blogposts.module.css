@@ -1,19 +1,33 @@
 .blogPostListContainer {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.blogPostListItem:hover {
+  background-color: rgba(0, 0, 255, 0.055);
+}
+
+.blogPostListItem {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   border: 2px black;
   border-style: groove;
-  background-color: aqua;
+  background-color: rgba(0, 0, 0, 0.082);
 }
 
 .blogListTitle {
   display: flex;
   flex-direction: column;
   justify-self: left;
+  width: 25%;
   padding: 20px;
   font-weight: 700;
   font-size: 2rem;
+  text-align: justify;
+  inline-size: auto;
+  /* overflow-wrap: break-word; */
 }
 .blogListImage {
   /* padding: 20px; */
@@ -21,7 +35,33 @@
   margin-top: 1rem;
 }
 
+/* .blogPostDate {
+} */
+
 .blogListBody {
-  padding: 1rem;
-  margin-left: 2rem;
+  width: 60%;
+  align-content: center;
+  padding: 2rem;
+}
+
+/* THE media query for this needs to vertically stack title > image > body, easy enough */
+
+@media (max-width: 600px) {
+  .blogPostListItem {
+    flex-direction: column;
+    width: auto;
+  }
+}
+@media (max-width: 600px) {
+  .blogListTitle {
+    width: auto;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .blogListBody {
+    width: auto;
+    padding: 2rem;
+  }
 }

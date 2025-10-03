@@ -24,3 +24,32 @@ Stretch Requirements
 🏹 Implement a select input (or similar mechanism) that allows users to categorise posts during creation, storing them in their own table in the database. Ensure appropriate routing for categories, with endpoints such as /categories and /categories/:id to enable users to browse and interact with posts by category.
 🏹 Create an edit functionality accessible via /posts/:id/edit, which pre-fills a form for post data. Create a working PUT route to update the post in the database.
 🏹 Develop an edit comment feature accessible via /posts/:id/comments/:id/edit, which pre-fills a form for comment data. Create a working PUT route to update the comment in the database.
+
+## Reflections
+
+After a brief chat with Bertie, I was reminded to get functionality working before getting too bogged down in styling. I'd previously put a column in my `comments` table for the post id, to get the relevant comments to appear beneath each post. In previous assignments, passing data like this had been a bit of trial and error, lots of googling, and a bit of LLM assisstance. This time, without really consciously doing it, I passed post_id as param into my comment form and it worked. Really pleased with that; having a Morpheus "he's starting to believe" moment.
+
+## References
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text
+
+"cheaty" way of allowing images from outside sources:
+https://nextjs.org/docs/messages/next-image-unconfigured-host
+
+sorting date query: this was a faff
+https://www.postgresql.org/docs/current/functions-formatting.html
+
+In the above, right at the bottom of the page, I noticed this:
+`to_char(current_timestamp, 'FMDay, FMDD  HH12:MI:SS')`
+I have no proper understanding of what this does, but I tried figuring it out and ended up staring down the barrel of hours of reading about SQL format models in the oracle documentation and decided it was great that it worked, and moved on with my life.
+
+`https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Format-Models.html#GUID-22F2B830-261E-4BF0-91FB-6A1DAFC6D0A3`
+
+My current working theory is that without the "Fill mode" on my to_char date query:
+`SELECT post_id, title, body, image_src, image_alt, to_char(date, 'FMDay FMDDth Month YYYY') AS post_date FROM posts`
+
+there are some trailing blanks causing issues; without FMDay FMDDth, it was telling me the 5th of October 2025 was a Thursday.
+Feels great to solve problems though.
+
+Had some fun figuring out dynamic links:
+https://nextjs.org/docs/pages/api-reference/components/link#examples

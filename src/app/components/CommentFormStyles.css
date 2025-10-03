@@ -1,0 +1,19 @@
+#commentContainer {
+  display: flex;
+
+  flex-direction: column;
+}
+
+#fieldsetContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#commentAuthorBox {
+  background-color: brown;
+}
+
+#commentBodyBox {
+  background-color: brown;
+}

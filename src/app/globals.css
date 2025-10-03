@@ -33,3 +33,76 @@ footer {
   font-weight: <weight>;
   font-style: normal;
 } */
+
+/* Comment Styling */
+.allCommentContainer {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5rem;
+}
+.commentContainer {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem;
+}
+.heading {
+  font-weight: bold;
+  font-size: x-large;
+}
+.button {
+  color: blueviolet;
+  border: 5px solid blue;
+}
+
+.commentAuthor {
+  font-weight: bold;
+  display: flex;
+}
+.commentBody {
+  display: flex;
+  margin-left: 2rem;
+  font-style: italic;
+  padding: 0.5rem;
+}
+
+.commentButtons {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Post Styling */
+.postBody {
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+}
+.postHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.imageBodyContainer {
+  display: flex;
+  flex-direction: row;
+}
+.postImage {
+  max-width: 50vw;
+}
+@media (max-width: 600px) {
+  .imageBodyContainer {
+    flex-direction: column;
+    width: auto;
+  }
+}
+@media (max-width: 600px) {
+  .postImage {
+    width: auto;
+  }
+}
+
+.postBody {
+}
