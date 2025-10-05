@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <header id="page-heading" className="font-bold text-2xl">
-          A History of Culture
+        <header id="page-heading" className="font-bold text-4xl">
+          A (brief) History of (some) &quot;Culture&quot;
         </header>
         <nav className="my-3">
           <ul className="flex flex-row gap-10 justify-center">

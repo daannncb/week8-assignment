@@ -52,7 +52,12 @@ export default async function BlogPosts({ params }) {
               <p className="commentBody">{comment.body}</p>
               <div className="commentButtons">
                 <Link href={`/blog/${post_id}/${comment.comment_id}`}>
-                  <p>View Comment</p>
+                  <p className="button">View Comment</p>
+                </Link>
+                <Link
+                  href={`/blog/${post_id}/${comment.comment_id}/editcomment`}
+                >
+                  <p className="button">Edit Comment</p>
                 </Link>
                 <DeleteComment params={comment.comment_id} />
               </div>

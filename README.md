@@ -27,7 +27,12 @@ Stretch Requirements
 
 ## Reflections
 
-After a brief chat with Bertie, I was reminded to get functionality working before getting too bogged down in styling. I'd previously put a column in my `comments` table for the post id, to get the relevant comments to appear beneath each post. In previous assignments, passing data like this had been a bit of trial and error, lots of googling, and a bit of LLM assisstance. This time, without really consciously doing it, I passed post_id as param into my comment form and it worked. Really pleased with that; having a Morpheus "he's starting to believe" moment.
+After a brief chat with Bertie, I was reminded to get functionality working before getting too bogged down in styling. I'd previously put a column in my `comments` table for the post id, to get the relevant comments to appear beneath each post. In previous assignments, passing data like this had been a bit of trial and error, lots of googling, and a bit of LLM assisstance. This time, without really consciously doing it, it worked.
+
+I think I've covered all of the user stories, and the edit comment part of the stretch. I could redirect that and polish it some more, but I would like to relax now.
+This assignment went much better than the last one. I think that's because I didn't decide to do some nonsense with my tables, so getting data to and from supabase was infinitely easier, plus I had the knowledge from last week.
+
+I would like to style more, but by the time I've got the logic done, there's not always much energy in the timeframe to style. But also more of the site styling than you think is deliberate, which might just be my poor tastes.
 
 ## References
 
@@ -53,3 +58,5 @@ Feels great to solve problems though.
 
 Had some fun figuring out dynamic links:
 https://nextjs.org/docs/pages/api-reference/components/link#examples
+
+https://www.w3schools.com/sql/sql_min_max.asp
