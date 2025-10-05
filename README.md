@@ -34,6 +34,8 @@ This assignment went much better than the last one. I think that's because I did
 
 I would like to style more, but by the time I've got the logic done, there's not always much energy in the timeframe to style. But also more of the site styling than you think is deliberate, which might just be my poor tastes.
 
+Post-deployment note: the user story to redirect to the view comment page is really terrible usability with the way I've built it. It could really do with a note saying "go back to post" and some distinction that you're on the lone-comment view of the post.
+
 ## References
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text
