@@ -1,6 +1,5 @@
 //! All blog posts
 
-import pg from "pg";
 import Image from "next/image";
 import blogListStyles from "./blogposts.module.css";
 import Link from "next/link";
